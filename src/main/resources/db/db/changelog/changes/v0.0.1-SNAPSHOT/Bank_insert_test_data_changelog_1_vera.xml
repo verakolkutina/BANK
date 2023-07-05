@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet author="m.egorov" id="insert test data into products table">
+        <insert tableName="products">
+            <column name="id" value="3"/>
+            <column name="name" value="mortgage"/>
+            <column name="status" value="ACCEPTED"/>
+            <column name="currency_code" value=""/>
+            <column name="interest_rate" value=""/>
+            <column name="product_limit" value=""/>
+            <column name="created_at" value=""/>
+            <column name="updated_at" value=""/>
+            <column name="manager_id" value=""/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="m.egorov" id="insert test data into managers table">
+        <insert tableName="managers">
+            <column name="id" value="123e4567-e89b-12d3-a456-426655440000"/>
+            <column name="first_name" value="12"/>
+            <column name="lust_name" value="a60266cb-1814-4285-83ef-bb55a4849af5"/>
+            <column name="status" value="ACCEPTED"/>
+            <column name="currency_code" value="2"/>
+            <column name="interest_rate" value="35"/>
+            <column name="product_limit" value="2200"/>
+            <column name="created_at" value="2022-02-22"/>
+            <column name="updated_at" value="42"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="m.egorov" id="insert test data into clients table">
+        <insert tableName="clients">
+            <column name="id" value="923e4567-e89b-12d3-a456-426655440000"/>
+            <column name="status" value="ACCEPTED"/>
+            <column name="tax_code" value="aaaabbbb-0000-9999-8888-777766665555"/>
+            <column name="first_name" value="Mikhail"/>
+            <column name="lust_name" value="Egorov"/>
+            <column name="created_at" value="2022-02-22"/>
+            <column name="updated_at" value="2022-03-20"/>
+            <column name="manager_id" value="923e4567-e89b-12d3-a456-426655440000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="m.egorov" id="insert test data into agreements table">
+        <insert tableName="agreements">
+            <column name="id" value="523e4567-e89b-12d3-a456-426655440000"/>
+            <column name="interest_rate" value="11111111-2222-3333-4444-555566667777"/>
+            <column name="status" value="115420"/>
+            <column name="sum" value="345"/>
+            <column name="created_at" value="2022-02-22"/>
+            <column name="updated_at" value="2022-02-29"/>
+            <column name="product_id" value="928e4567-e89b-12d3-a456-426655440000"/>
+            <column name="account_id" value="920e4567-e89b-12d3-a456-426655440000"/>
+        </insert>
+    </changeSet>
+
+    <changeSet author="m.egorov" id="insert test data into accounts table">
+        <insert tableName="accounts">
+            <column name="id" value="aaaabbbb-0000-9999-8888-777766665555"/>
+            <column name="credit_id" value="11111111-2222-3333-4444-555566667777"/>
+            <column name="account_number" value="757557"/>
+            <column name="principal_debt" value="150000"/>
+            <column name="interest_debt" value="10000"/>
+            <column name="is_active" value="true"/>
+            <column name="opening_date" value="2022-02-22"/>
+            <column name="closing_date" value="2024-04-04"/>
+            <column name="currency_code" value="USD"/>
+            <column name="outstanding_principal" value="1000"/>
+            <column name="outstanding_interest_debt" value="100"/>
+        </insert>
+    </changeSet>
+
+
+    <changeSet author="m.egorov" id="insert test data into transactions table">
+        <insert tableName="transactions">
+            <column name="id" value="165e4567-e89b-12d3-a456-426655440000"/>
+            <column name="type" value="aaaabbbb-0000-9999-8888-777766665555"/>
+            <column name="amount" value="153e4567-e89b-12d3-a456-426655440000"/>
+            <column name="descriptions" value="text"/>
+            <column name="created_at" value="2012-02-02"/>
+            <column name="credit_id" value="157e4567-e89b-12d3-a456-426655440000"/>
+            <column name="debit_account_id" value="150e4567-e89b-12d3-a456-426655440000"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
